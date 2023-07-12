@@ -45,6 +45,10 @@ if (isNewArchitectureEnabled()) {
 
 android {
     compileSdkVersion safeExtGet('compileSdkVersion', 30)
+      compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     buildToolsVersion safeExtGet('buildToolsVersion', '28.0.3')
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 16)
